@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: api-gatway
+  cloud:
+    gateway:
+      routes:
+        - id: StockService
+          uri: http://localhost:8094/
+        #        predicates:
+        #          -path=/stock/**
+        - id: ProductService
+          uri: http://localhost:8092/
+#        predicates=
+#          - path=/product/**
+server:
+  port: 8080
