@@ -8,19 +8,18 @@ import org.hibernate.annotations.NotFound;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import java.time.LocalDate;
+import javax.persistence.*;
+
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "appointments")
 public class Appointment {
+
+    @Column(nullable = false)
     @Id
-    @Column(nullable = false, unique = true)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private  long appointmentId;
 
     @Column(name = "patient_id",nullable = false)
@@ -41,8 +40,13 @@ public class Appointment {
 
     @Column(name = "appointment_date",nullable = false)
     @NonNull()
-    private LocalDate aooountmentDat;
+    private String aooountmentDat;
 
-
-
+//    public Appointment(long userId, long doctorId, @NonNull String priscription, boolean approvedStatus, @NonNull String aooountmentDat) {
+//        this.userId = userId;
+//        this.doctorId = doctorId;
+//        this.priscription = priscription;
+//        this.approvedStatus = approvedStatus;
+//        this.aooountmentDat = aooountmentDat;
+//    }
 }

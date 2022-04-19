@@ -20,7 +20,7 @@ public class ClientController {
         return clientService.getAllClients();
     }
 
-@PostMapping("/add")
+      @PostMapping("/add")
     public Client addclilent(@RequestBody Client client ){
         return clientService.addClient(client);
 
