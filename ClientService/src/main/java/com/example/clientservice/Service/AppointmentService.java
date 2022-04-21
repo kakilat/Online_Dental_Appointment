@@ -6,21 +6,12 @@ import com.example.clientservice.dataAccess.AppointmentDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 
 @Service
 public class AppointmentService {
 @Autowired
     Sender sener;
-//    public String  testKafka( ){
-//        Message<String> testMessage =
-//                new Message<String>(
-//                        "newTestKafka","THIS MESSAGE IS FOR TEST"
-//                );
-//        sener.send(testMessage);
-//        return "Testing";
-//
-//    }
+
     public AppointmentDAO newAppointment(long customerId, AppointmentDAO appointmentDAO){
         appointmentDAO.setUserId(customerId);
         Message<AppointmentDAO> newAppointment =
@@ -48,9 +39,7 @@ public class AppointmentService {
 
         Message<Long> deleteAppointment =
                 new Message<Long>(
-                        "canceleAppointment",appointmentId
-
-                );
+                        "canceleAppointment",appointmentId);
         sener.send(deleteAppointment);
 
 

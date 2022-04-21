@@ -35,15 +35,7 @@ public class Listener {
                  Appointment appointment = newAppointment.getMessage();
                 appointmentService.saveAppointment(appointment);
             }
-//            if(message.getCommand().equals("newTestKafka")){
-//                Message<String> newAppointment = objectMapper.readValue(messageString  ,
-//                        new TypeReference< Message<String>>() {
-//                        }
-//                );
-//                String appointment = newAppointment.getMessage();
-//                System.out.println(appointment+"RECIVED ");
-//
-//            }
+
             if(message.getCommand().equals("updateAppointment")){
                 Message<Appointment> newAppointment = objectMapper.readValue(messageString  ,
                         new TypeReference< Message<Appointment>>() {
@@ -62,6 +54,17 @@ public class Listener {
                 Long appointment = newAppointment.getMessage();
                 appointmentService.cancelAppointment(appointment);
                 System.out.println("Message Recived");
+
+            }
+            if(message.getCommand().equals("updateStatus")){
+                Message<Appointment> newAppointment = objectMapper.readValue(messageString,
+                        new TypeReference< Message<Appointment>>() {
+
+                        }
+                );
+                Appointment appointment = newAppointment.getMessage();
+                appointmentService.updateStatus(appointment.getAppointmentId(),appointment);
+
 
             }
 

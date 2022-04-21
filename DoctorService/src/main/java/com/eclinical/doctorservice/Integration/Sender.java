@@ -1,4 +1,4 @@
-package com.example.clientservice.Integration;
+package com.eclinical.doctorservice.Integration;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -19,7 +19,7 @@ public class Sender {
             String stringMessage= objectMapper.writeValueAsString(message);
             System.out.println("Sending message");
             kafkaTemplate.send("appointment",stringMessage);
-            System.out.println("Sending message SucesssSSSSSS");
+
         }
         catch (JsonProcessingException e) {
             System.out.println("ERORRR HAPPENNED ON SENDING DATA"

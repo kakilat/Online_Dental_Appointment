@@ -26,18 +26,18 @@ public class ClientController {
 
     }
     @GetMapping("/findById/{clientId}")
-    public Client findById(@PathVariable String clientId){
+    public Client findById(@PathVariable Long clientId){
 
        return clientService.findById(clientId);
     }
     @DeleteMapping("/delete/{clientId}")
-    public void deleteDoctor(@PathVariable String clientId){
+    public void deleteDoctor(@PathVariable Long clientId){
 
         clientService.deleteClient(clientId);
     }
 
     @PutMapping("/update")
-    public void updateDoctor(@RequestBody Client client ){
-       clientService.updateClient(client );
+    public Client updateDoctor(@RequestBody Client client ){
+       return clientService.updateClient(client );
     }
 }

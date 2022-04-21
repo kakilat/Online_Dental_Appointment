@@ -1,4 +1,4 @@
-package com.example.clientservice.Integration;
+package com.eclinical.doctorservice.Integration;
 
 
 import lombok.AllArgsConstructor;

@@ -9,22 +9,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/appointment")
 public class AppointmentController {
     @Autowired
     AppointmentService appointmentService;
 
-    @GetMapping("list")
-    public List<Appointment> getAppoint(){
-      return   appointmentService.findAll();
+    @GetMapping ("doctor/{doctorId}")
+    public List<Appointment> appointmentByDoctor(@PathVariable("doctorId")Long doctorId){
+      return   appointmentService.fincAppointentByDoctorId(doctorId);
     }
-
-    @PostMapping ("new")
-    public Appointment newAppointment(@RequestBody Appointment appointment){
-        return   appointmentService.saveAppointment(appointment);
-    }
-    @DeleteMapping ("delete/{appId}")
-    public void deleteAppointment(@PathVariable Long appId){
-           appointmentService.cancelAppointment(appId);
+    @GetMapping ("patient/{patientId}")
+    public List<Appointment> appointmentsByPatientId(@PathVariable("patientId")Long patientId){
+        return   appointmentService.findAppointmentByUserId(patientId);
     }
 }

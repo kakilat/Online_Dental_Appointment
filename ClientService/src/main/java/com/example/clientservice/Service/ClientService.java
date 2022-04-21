@@ -23,10 +23,10 @@ public Client addClient(Client client){
     return clientRepository.save(client);
 
 }
-public Client findById(String clientId){
+public Client findById(Long clientId){
     return clientRepository.findById(clientId).orElse(null);
 }
- public void deleteClient(String clientId){
+ public void deleteClient(Long clientId){
     Client newDoctor=findById(clientId);
   clientRepository.delete(newDoctor);
  }

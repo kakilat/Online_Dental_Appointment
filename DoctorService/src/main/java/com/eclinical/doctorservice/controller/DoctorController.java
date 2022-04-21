@@ -17,13 +17,13 @@ public class DoctorController {
 
 
     @GetMapping("/findById/{doctorId}")
-    public Doctor findById(@PathVariable String doctorId){
+    public Doctor findById(@PathVariable Long doctorId){
         return doctorService.findById(doctorId);
     }
 
 
     @PutMapping("/update")
-    public void updateEmployee(@RequestBody Doctor doctor){
-       doctorService.updateDoctor(doctor);
+    public Doctor updateEmployee(@RequestBody Doctor doctor){
+       return doctorService.updateDoctor(doctor);
     }
 }

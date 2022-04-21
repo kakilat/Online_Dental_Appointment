@@ -19,8 +19,7 @@ public class AppointmentServiceImple implements AppointmentService {
 
     @Override
     public Appointment updateAppointment(long appointmentId,Appointment appointment) {
-
-        Appointment oldAppointment =appointmentRepository.findById(appointmentId).orElse(null);
+        Appointment oldAppointment =appointmentRepository.findById(appointment.getAppointmentId()).orElse(null);
         appointment.setApprovedStatus(oldAppointment.isApprovedStatus());
         return appointmentRepository.save(appointment);
     }
@@ -43,13 +42,15 @@ public class AppointmentServiceImple implements AppointmentService {
 
     @Override
     public List<Appointment> fincAppointentByDoctorId(long doctorId) {
-        return appointmentRepository.fincAppointentByDoctorId(doctorId);
+        return appointmentRepository.finAppointmentsByDoctorId(doctorId);
     }
 
     @Override
     public Appointment updateStatus(long appointmentId,Appointment appointment) {
-        Appointment oldAppointment=findAppointmentById(appointmentId);
+        Appointment oldAppointment=findAppointmentById(appointment.getAppointmentId());
+
         oldAppointment.setApprovedStatus(appointment.isApprovedStatus());
+
         return appointmentRepository.save(oldAppointment);
     }
 

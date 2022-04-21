@@ -1,0 +1,224 @@
+/* fonts import */
+
+@import url('https://fonts.googleapis.com/css?family=Karla|Trade+Winds&display=swap');
+
+/* Fonts used
+font-family: 'Karla', ;
+*/
+
+/* Scrolling setting */
+
+html {
+scroll-behavior: smooth;
+}
+
+/* Hero Image styling */
+
+/* #imgkaki {
+  overflow: auto;
+  padding-bottom: 20px;
+  resize: both;
+  width: 7.183rem;
+} */
+
+/* Box icons image styling */
+
+#imgkaki{
+  display: block;
+  height: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+
+}
+
+
+
+
+/* modal form group */
+
+.form-group {
+
+  background: #ffffff;
+  color: #6C7A89;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1.563rem;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+/* id's */
+
+/* map settings */
+ #map {
+   background-color: grey;
+   height: 400px;
+   padding-bottom: 0.313rem;
+   width: 100%;
+ }
+
+/* arrow page to top icon */
+
+ #fab {
+    position: absolute;
+    right: 25px;
+    font-size: 4rem;
+}
+/* treatment table settings */
+
+table {
+    border-collapse: collapse;
+    padding: 1.25rem;
+}
+
+/* Table design */
+
+table, td, th {
+    border: 2px solid #2ebddb;
+    border-radius: 5px;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 0.625rem;;
+    padding-bottom: 1.25rem;
+    text-align: left;
+
+}
+
+/* classes */
+
+
+
+.button {
+  background-color: #16a2b8;
+  border: none;
+  border-radius: 0.313rem;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+
+}
+
+.button:hover {
+  background-color: #13899d;
+  color: white;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+
+}
+
+.option {
+    border-radius: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 3px;
+
+}
+
+/* carousel settings */
+
+.carousel .item {
+  height: auto;
+  padding: 10px;
+  padding-bottom: 25px;
+  width: auto;
+
+}
+
+.item img {
+    left: 0;
+    min-height: 500px;
+    object-fit:cover;
+    position: absolute;
+    top: 0;
+
+}
+
+/* Footers and padding */
+
+
+.border {
+  margin: 4.375rem;
+}
+
+.padding-footer {
+  padding: 1.875rem;
+}
+ .btn {
+    padding: 1.25rem;
+}
+
+
+/* font and content */
+
+p {
+    border: 2px solid #2ebddb;
+    border-radius: 0.313rem;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 0.625rem;
+
+}
+
+
+
+/* Fonts */
+
+h1 {
+    border: 2px solid #2ebddb;
+    border-radius: 5px;
+    color: #245396;
+    font-family: 'Karla';
+    font-size: 2.00rem;
+    font-style: italic;
+    text-align: center;
+
+}
+
+h2 {
+    font-family: 'Karla';
+    font-size: 1.25rem;
+    font-style: italic;
+    text-align: center;
+
+}
+
+/* h3 styling */
+
+h3 {
+    color: black;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    text-align: center;
+
+}
+
+h4 {
+    border-radius: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    padding-right: 90px;
+
+}
+
+h5 {
+  display: block;
+  margin-left: 10;
+  margin-right: 0;
+  text-align: center;
+}
+
+h6 {
+
+    color: #245396;
+    font-family: 'Karla';
+    font-size: 2.00rem;
+    font-style: italic;
+    text-align: center;
+}

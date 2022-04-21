@@ -2,7 +2,7 @@ package com.example.adminservice.Service;
 
 
 
-import com.example.adminservice.Integretion.DoctorDTO;
+import com.example.adminservice.model.Doctor;
 import com.example.adminservice.repository.AdminRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,22 +16,22 @@ public class AdminService {
     @Autowired(required = false)
     private AdminRepository doctorRepository;
 
-public List<DoctorDTO > getAllDoctors(){
+public List<Doctor> getAllDoctors(){
 
     return doctorRepository.findAll();
 }
-public DoctorDTO  addDoctor(DoctorDTO    doctor){
+public Doctor  addDoctor(Doctor    doctor){
     return doctorRepository.save(doctor);
 
 }
-public DoctorDTO  findById(String doctorId){
+public Doctor  findById(Long doctorId){
     return doctorRepository.findById(doctorId).orElse(null);
 }
- public void deleteDoctor(String doctorId){
-    DoctorDTO  newDoctor=findById(doctorId);
+ public void deleteDoctor(Long doctorId){
+     Doctor  newDoctor=findById(doctorId);
   doctorRepository.delete(newDoctor);
  }
-public DoctorDTO updateDoctor(DoctorDTO  doctor){
+public Doctor updateDoctor(Doctor  doctor){
     return doctorRepository.save(doctor);
 }
 }

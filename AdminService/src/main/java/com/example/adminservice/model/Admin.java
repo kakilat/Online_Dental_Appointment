@@ -3,17 +3,18 @@ package com.example.adminservice.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document
+@Entity
 public class Admin {
-@Id
+       @Id
     private String id;
     private String firstName;
     private String lastName;

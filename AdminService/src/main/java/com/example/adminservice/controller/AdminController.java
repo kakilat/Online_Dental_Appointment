@@ -1,42 +1,44 @@
 package com.example.adminservice.controller;
 
 
-import com.example.adminservice.Integretion.DoctorDTO;
+
 import com.example.adminservice.Service.AdminService;
+import com.example.adminservice.model.Doctor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(allowedHeaders = "*")
 @RequestMapping("/admin")
 public class AdminController {
    @Autowired
     private AdminService doctorService;
 
    @GetMapping("/all")
-    public List<DoctorDTO> getAllDoctors(){
+    public List<Doctor> getAllDoctors(){
         return doctorService.getAllDoctors();
     }
 
-@PostMapping("/add")
-    public DoctorDTO addDoctor(@RequestBody DoctorDTO doctor){
+     @PostMapping("/add")
+    public Doctor addDoctor(@RequestBody Doctor doctor){
         return doctorService.addDoctor(doctor);
 
     }
     @GetMapping("/findById/{doctorId}")
-    public DoctorDTO findById(@PathVariable String doctorId){
+    public Doctor findById(@PathVariable Long doctorId){
         return doctorService.findById(doctorId);
     }
     @DeleteMapping("/delete/{doctorId}")
-    public void deleteDoctor(@PathVariable String doctorId){
+    public void deleteDoctor(@PathVariable Long doctorId){
 
         doctorService.deleteDoctor(doctorId);
     }
 
     @PutMapping("/update")
-    public void updateEmployee(@RequestBody DoctorDTO doctor){
-       doctorService.updateDoctor(doctor);
+    public Doctor updateEmployee(@RequestBody Doctor doctor){
+      return doctorService.updateDoctor(doctor);
     }
 }

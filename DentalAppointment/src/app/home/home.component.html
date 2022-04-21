@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Styling and bootstrap elements -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dental Clinic</title>
+
+	<!-- Bootstrap for responsive layout-->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+	<!-- Adds icon to page tab at top of website -->
+
+	<link rel="shortcut icon" type="image/png" href="assets/img/toothpaste.png">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/">
+</head>
+
+<body>
+	<a name="top"></a>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-sm bg-light">
+		<!-- <a class="nav-item nav-link active navbar-brand" href="index.html"
+			pull-left><img src="assets/img/Dentist1.png"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggle-icon"></span>
+        </button> -->
+			<div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
+				<div class="container-fluid">
+					<div class="navbar-nav">
+						<a class="nav-item nav-link active navbar-brand" href="#index">Home</a>
+						<a class="nav-item nav-link active navbar-brand" href="#Treatments">Treatments</a>
+						<a class="nav-item nav-link active navbar-brand" href="#Treatments">Prices</a>
+						<a class="nav-item nav-link active navbar-brand" href="#Testimonials">Testimonials</a>
+					</div>
+				</div>
+			</div>
+    </nav>
+
+	<!-- Image and responsive content -->
+<div class="container-fluid">
+	<div class="row">
+		<img class='imgkaki' src="assets/img/dentist.jpg" alt="Welcome to Dental clinic">
+  </div>
+	</div>
+
+        <div class="container-fluid">
+			<div class="row">
+                <div class="col-col-sm-12 col-md-6 col-lg-3">
+
+					<p>At Our Practice, we're committed to providing a high standard of care to all our patients. We are
+						a
+						friendly dental surgery with experienced staff to help you stay calm no matter the treatment.
+						<img src="assets/img/toothbadge.jpg" alt="badge">
+					</p>
+				</div>
+
+				<div class="col-sm-12 col-md-6 col-lg-3">
+                	<p>The practice offers a range of services for all your dental health needs. We pride ourselves on
+						being
+						the highest rated dental surgeries in the city.
+						Visit us and we'll discuss your needs.
+						<img src="assets/img/toothtools.jpg" alt="tools"> </p>
+				</div>
+
+				<div class="col-sm-12 col-md-6 col-lg-3">
+                    <p>We offer a full range of NHS dental services. This includes private options as well at a modest
+						price. Simply ask your dentist for a personal quote and they can go through payment options.
+						<img src="assets/img/dentisticon.jpg" alt="dentist">
+					</p>
+                </div>
+				<div class="col-col-sm-12 col-md-6 col-lg-3">
+
+					<!-- content and option to play Vimeo video -->
+            	<p>Too many sugary drinks can harm a childs teeth. We've recently looked at sports drinks and the harm
+						they cause on teeth, especially when drank every day. Click <a href="https://vimeo.com/392042933"
+							target="_blank">here</a> to view the video.
+						<img src="assets/img/toothbrushicon.jpg" alt="brush">
+                          </p>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Form modal-->
+		<div class="text-center">
+			<a  class="btn btn-lg btn-info"  routerLink="/signup">Make an
+				appointment</a>
+		</div>
+		<br>
+        <div class="text-center">
+			<a  class="btn btn-lg btn-info"  routerLink="/login">Log In</a>
+		</div>
+		<br>
+
+
+    <!-- <h6>Our Location</h6>
+		<div id="map"></div> -->
+
+<div class="card-body">
+			<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog">
+
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header text-center">
+							<h4 class="modal-title w-100 font-weight-bold">Your Information</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                    </button>
+						</div>
+
+
+
+						<form>
+							<div class="form-group">
+								<label for="exampleFormControlInput1">Email Address</label>
+								<input type="email" class="form-control" id="exampleFormControlInput4" placeholder="">
+                                    </div>
+								<div class="form-group">
+									<label for="exampleFormControlSelect1">What would you like to do?</label>
+									<select class="form-control" id="exampleFormControlSelect1">
+
+<!-- Appoitnemt button -->
+      <option>Make An Appointment</option>
+      <option>Contact Us</option>
+    </select>
+								</div>
+								<div class="form-group">
+									<label for="exampleFormControlSelect2">What treatment are you looking for?</label>
+									<select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>Checkup</option>
+      <option>Scale and Polish</option>
+      <option>Wisdom Teeth</option>
+      <option>Filling</option>
+      <option>Other</option>
+    </select>
+								</div>
+								<div class="form-group">
+									<label for="exampleFormControlTextarea1">Please Enter Any Additional Information</label>
+									<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+								</div>
+						</form>
+
+
+						<div class="modal-footer d-flex justify-content-center">
+
+
+							<button class="button" onclick="alert('Thank You')">Send your Request</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Treatmemts info table -->
+		<h6><a name="Treatments">Treatments and Prices</a></h6>
+
+		<table class="center">
+			<tr>
+				<th>Treatments</th>
+				<th>Adult Prices</th>
+				<th>Child Prices</th>
+				<th>NHS</th>
+			</tr>
+			<tr>
+				<td>Dental Health Check</td>
+				<td>£45.00</td>
+				<td>£25.00</td>
+				<td>£16.00</td>
+
+
+			</tr>
+			<tr>
+				<td>Hygiene Visit</td>
+				<td>$40.00</td>
+				<td>$15.00</td>
+				<td>$16.00</td>
+			</tr>
+			<tr>
+				<td>Extractions</td>
+				<td>£200.00</td>
+				<td>£95.00</td>
+				<td>£16.00</td>
+			</tr>
+			<tr>
+				<td>Standard Filling</td>
+				<td>£45.00</td>
+				<td>£25.00</td>
+				<td>£32.00</td>
+			</tr>
+			<tr>
+				<td>White Filling</td>
+				<td>£60.00</td>
+				<td>£30.00</td>
+				<td>To Discuss</td>
+			</tr>
+			<tr>
+				<td>Crowns</td>
+				<td>£450.00</td>
+				<td>£190.00</td>
+				<td>To Discuss</td>
+			</tr>
+			<tr>
+				<td>Implant</td>
+				<td>£1400.00</td>
+				<td>£1250.00</td>
+				<td>To Discuss</td>
+			</tr>
+			<tr>
+				<td>X-Ray</td>
+				<td>£45.00</td>
+				<td>£25.00</td>
+				<td>To Discuss</td>
+			</tr>
+		</table>
+		<br>
+
+		<h6><a name="Testimonials">Testimonials</a></h6>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active" data-interval="10000">
+					<h2>I just have to say a very caring dentist who excels in reassuring their patients and gives
+						excellent service, explains what they are doing every step of the way. The best dentist I have
+						ever known with a very calming manner to help me with anxiety issues. Anon, NHS Choices.</h2>
+				</div>
+				<div class="carousel-item" data-interval="10000">
+					<h2>I would like to show my appreciation to all staff at the Dental Practice. An extremely
+						professional service and always strive to help and accommodate patients. The dentist is
+						extremely professional, approachable, honest and helpful. Thank you very much for your
+						outstanding treatment, help, and advice.</h2>
+				</div>
+				<div class="carousel-item" data-interval="10000">
+					<h2>My dentist is possibly the best dentist I have ever seen both from ability and their fantastic
+						people skills. I was made to feel comfortable in what was not simple procedures. Both dental
+						nurses that were involved with my visits were fantastic. A personal thank you from myself for
+						such exceptional visits and I am extremely happy with the work done!</h2>
+				</div>
+			</div>
+
+                     </div>
+        </div>
+    </div>
+ </div>
+			<a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<br>
+		<a href="#top" id="fab"><i class="fas fa-arrow-circle-up"></i></a>
+
+		<!-- Footer -->
+		<footer class="container-fluid bg-4 text-center">
+			<a href="https://www.facebook.com/ODLDentalClinic" target="_blank" rel="noopener"
+				aria-label="Follow us on Facebook">
+				<i class="fab fa-facebook fa-3x"></i>
+			</a>
+
+			<a href="https://twitter.com/hashtag/dentalclinic" target="_blank" rel="noopener"
+				aria-label="Follow us on Twitter">
+				<i class="fab fa-twitter fa-3x"></i>
+			</a>
+
+		</footer>
+		<br>
+		<h3>Dental Clinic created  Kalkidan Akalu 2022</h3> <script
+				src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+				integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+				crossorigin="anonymous">
+				</script>
+
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js">
+				</script>
+
+				<script src="assets/js/script.js"></script>
+
+				<script async defer
+					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6qFLVRq_t3uKSNe6uvC-as31sIjWD8kY&callback=initMap">
+				</script>
+</body>

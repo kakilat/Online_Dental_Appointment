@@ -23,14 +23,17 @@ public Doctor addDoctor(Doctor doctor){
     return doctorRepository.save(doctor);
 
 }
-public Doctor findById(String doctorId){
+public Doctor findById(Long doctorId){
     return doctorRepository.findById(doctorId).orElse(null);
 }
- public void deleteDoctor(String doctorId){
+ public void deleteDoctor(Long doctorId){
     Doctor newDoctor=findById(doctorId);
   doctorRepository.delete(newDoctor);
  }
 public Doctor updateDoctor(Doctor doctor){
-    return doctorRepository.save(doctor);
+    Doctor doctor1=findById(doctor.getId());
+    doctor1.setEmail(doctor.getEmail());
+    doctor1.setPassword(doctor.getPassword());
+    return doctorRepository.save(doctor1);
 }
 }
